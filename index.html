@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Image Click</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1 class="heade-h1">Turing Vs Gates</h1>
+      </div>
+      <div class="links">
+        <a href="#">in</a>
+        <a href="#">un</a>
+
+        <a href="#">X</a>
+        <a href="#">home</a>
+
+        <input type="search" />
+        <input type="email" />
+      </div>
+    </header>
+    <div id="container">
+      <div class="image-container">
+        <img src="img/1a.jpg" alt="Image 1" class="clickable-image" />
+        <img src="img/2a.jpg" alt="Image 2" style="display: none" />
+        <img src="img/3a.jpg" alt="Image 3" style="display: none" />
+      </div>
+      <div class="image-container2">
+        <img src="img/1b.jpg" alt="Imageb1" class="clickable-image2" />
+        <img src="img/2b.jpg" alt="Imageb2" style="display: none" />
+        <img src="img/3b.jpg" alt="Imageb 3" style="display: none" />
+      </div>
+    </div>
+    <footer></footer>
+    <script>
+      $(document).ready(function () {
+        $(".clickable-image").click(function () {
+          $(".image-container img").not(this).show();
+        });
+
+        $(".clickable-image2").click(function () {
+          $(".image-container2 img").not(this).show();
+        });
+      });
+    </script>
+  </body>
+</html>
